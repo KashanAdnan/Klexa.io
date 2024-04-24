@@ -159,6 +159,32 @@ main .video {
     width: 600px;
 }
 
+@keyframes bounce {
+
+    0%,
+    25%,
+    50%,
+    75%,
+    90%,
+    100% {
+        transform: translateY(0);
+    }
+
+    15%,
+    40% {
+        transform: translateY(-15px);
+    }
+
+    65%,
+    80% {
+        transform: translateY(-10px);
+    }
+
+    95% {
+        transform: translateY(-5px);
+    }
+}
+
 .paragraph button,
 .testimonial-button {
     font-family: "Poppins";
@@ -174,7 +200,10 @@ main .video {
     border-radius: 50px;
     cursor: pointer;
     transition: 0.2s;
+    animation: bounce 2s linear infinite;
 }
+
+
 
 button span {
     font-size: 14px;
@@ -446,7 +475,7 @@ button span {
 
 .result-container {
     width: 100%;
-    background-image: url("./images/background-proof.png");
+    background-image: url("./images/background-test.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top;
@@ -481,19 +510,17 @@ button span {
 }
 
 .results {
-    width: 100%;
-    display: flex;
     margin-top: 25px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 80px;
+    gap: 12px;
 }
 
 .results img {
     width: 400px;
     height: 200px;
-    margin: 10px;
     border-radius: 5px;
     border: 1px solid var(--black-color);
 }
@@ -510,7 +537,8 @@ button span {
 }
 
 .brand-exp h1 {
-    font-size: 2rem;
+    font-size: 6vmin;
+    margin-bottom: 20px;
 }
 
 .brand-exp .brand {
@@ -535,7 +563,7 @@ footer p span {
 .border-center {
     width: 900px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     margin: 0 auto;
 }
 
@@ -544,12 +572,24 @@ footer p span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    margin: 30px 0 0 0;
 }
 
 .container {
     width: 45%;
     min-width: 500px;
+}
+
+.space {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.faq-heading {
+    font-family: "Poppins";
+    text-align: center;
+    margin-top: 34px;
+    font-size: 6.4vmin;
 }
 
 .wrapper {
@@ -601,4 +641,22 @@ footer p span {
 
 .content-acc p {
     margin: 10px 0;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow img {
+    width: 70%;
+}
+
+.logo {
+    width: 22vmin;
+}
+
+.logo img {
+    width: 100%;
 }
