@@ -205,7 +205,6 @@ main .video {
     transition: 0.2s;
     animation: bounce 2s linear infinite;
     max-width: 700px;
-    width: 100%;
     margin: 0 1rem;
 }
 
@@ -384,6 +383,11 @@ button span {
 
 .comment {
     flex-wrap: wrap;
+    width: 100%;
+}
+
+.comment img {
+    width: 100%;
 }
 
 .proof h3 {
