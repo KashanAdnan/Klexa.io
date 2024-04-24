@@ -25,7 +25,8 @@ header {
 }
 
 header nav {
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     background-color: var(--white-color);
     height: 65px;
     display: flex;
@@ -147,7 +148,7 @@ main .video {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 35vh;
+    margin-top: 15rem;
 }
 
 .paragraph p {
@@ -201,6 +202,9 @@ main .video {
     cursor: pointer;
     transition: 0.2s;
     animation: bounce 2s linear infinite;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 1rem;
 }
 
 
@@ -510,19 +514,28 @@ button span {
 }
 
 .results {
+    max-width: 1200px;
     margin-top: 25px;
+    padding: 0 1rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    padding: 0 80px;
     gap: 12px;
 }
 
+@media (max-width: 786px){
+    .results{
+        grid-template-columns: 1fr;
+    }
+}
+
 .results img {
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: center;
     border-radius: 5px;
-    border: 1px solid var(--black-color);
+    box-shadow: 0 3px 5px 0 #0005;
 }
 
 .brand-exp {
@@ -576,8 +589,8 @@ footer p span {
 }
 
 .container {
-    width: 45%;
-    min-width: 500px;
+    max-width: 600px;
+    padding: 0 1rem;
 }
 
 .space {
@@ -653,10 +666,13 @@ footer p span {
     width: 70%;
 }
 
-.logo {
-    width: 22vmin;
+.logo img {
+    height: 50px;
 }
 
-.logo img {
-    width: 100%;
+marquee img{
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin: 0 2rem;
 }
