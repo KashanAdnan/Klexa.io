@@ -147,6 +147,10 @@
         width: 100% !important;
     }
 
+    .proof {
+        padding: 0 10px !important;
+    }
+
     .message-center {
         margin-left: 0 !important;
     }
