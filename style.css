@@ -756,8 +756,8 @@ footer p span {
     }
 
     nav button {
-        font-size: 10px;
-        padding: 9px 17px;
+        font-size: 10px !important;
+        padding: 9px 17px !important;
     }
 
     main {
