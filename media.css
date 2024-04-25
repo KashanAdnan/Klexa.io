@@ -126,15 +126,6 @@
         width: 100% !important;
     }
 
-    .result-container {
-        margin-top: 0 !important;
-        background: url("./images/background-test.png") !important;
-    }
-
-    .result-container p {
-        width: 100% !important;
-    }
-
     .results {
         padding: 0 10px !important;
         grid-template-rows: 1fr !important;
