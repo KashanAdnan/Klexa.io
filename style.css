@@ -730,6 +730,10 @@ footer p span {
     animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
 
+.scroller[data-animated="true"]:hover .scroller__inner {
+    animation-play-state: paused;
+}
+
 .scroller[data-direction="right"] {
     --_animation-direction: reverse;
 }
