@@ -20,7 +20,7 @@
 
     main {
         text-align: center !important;
-        padding: 0 20px !important;
+        /* padding: 0 20px !important; */
         height: 85vh !important;
     }
 
@@ -200,6 +200,11 @@
     }
 
     .video {
-        top: 260px;
+        top: 290px !important;
+        height: 71.7vh !important;
+        background-position: center !important;
+        border-left: 4px solid #fff !important;
+        border-right: 4px solid #fff !important;
+        border-radius: 10px;
     }
 }
