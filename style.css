@@ -64,33 +64,34 @@ header nav button:hover {
 
 main {
     font-family: "Poppins";
-    padding: 0 60px;
     background-image: url("./images/background.png");
     background-repeat: no-repeat;
+    padding: 2em 0;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    overflow: visible;
+    height: 70vh;
     color: var(--white-color);
 }
 
 main h1 {
-    margin-top: 40px;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 main h2 {
     margin: 0 0 10px 0;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.6em;
 }
 
 main button {
     background-color: var(--secondary-color);
     font-family: "Poppins";
     padding: 7px 15px;
-    font-size: 1.3rem;
+    font-size: 1.4em;
     border: 0;
     border-radius: 8px;
     font-weight: 500;
@@ -99,17 +100,17 @@ main button {
 }
 
 main .video {
-    width: 900px;
-    margin-top: 30px;
+    width: 75%;
+    margin-top: 2vmax;
     background-image: url("./videos/thumbnail/thumbnail1.png");
-    height: 470px;
+    height: 82.7vh;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: -180px;
+    position: absolute;
+    top: 250px;
 }
 
 .video .shadow {
@@ -148,6 +149,7 @@ main .video {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50vmin;
     margin-top: 15rem;
 }
 
@@ -189,12 +191,12 @@ main .video {
 .paragraph button,
 .testimonial-button {
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 500;
     background-color: var(--main-color);
     color: var(--white-color);
-    padding: 10px 28px;
+    padding: 15px 35px;
     border: 0;
     outline: 0;
     border: 2px solid var(--main-color);
@@ -203,14 +205,13 @@ main .video {
     transition: 0.2s;
     animation: bounce 2s linear infinite;
     max-width: 700px;
-    width: 100%;
     margin: 0 1rem;
 }
 
 
 
 button span {
-    font-size: 14px;
+    font-size: 0.8em;
     color: var(--secondary-color);
 }
 
@@ -240,8 +241,9 @@ button span {
 
 .testimonial {
     width: 100%;
-    height: 100vh;
-    padding: 0 0 40px 0;
+    height: 110vh;
+    padding-top: 40px;
+    padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,11 +256,11 @@ button span {
 
 .testimonial h3 {
     color: var(--main-color);
-    font-size: 18px;
+    font-size: 1.4em;
 }
 
 .testimonial .testimonial-heading {
-    font-size: 46px;
+    font-size: 3.4em;
 }
 
 .testimonial .testimonial-title {
@@ -280,13 +282,13 @@ button span {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    width: 310px;
+    width: 410px;
     margin: 0 5px;
 }
 
 .thumbnail {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -379,14 +381,31 @@ button span {
     padding: 0 30px;
 }
 
-.proof h3 {
-    color: var(--main-color);
-    font: 16px;
+.comment {
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.proof .comments img {
-    width: 900px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.03);
+.comment img {
+    width: 100%;
+}
+
+.proof h3 {
+    color: var(--main-color);
+    font-size: 1.4em;
+}
+
+.proof h1 {
+    font-size: 2.7em;
+}
+
+
+
+.comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .comments {
@@ -396,6 +415,18 @@ button span {
     justify-content: center;
     flex-direction: column;
     margin-top: 30px;
+}
+
+.proof .comments img {
+    width: 640px;
+    /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.08); */
+    margin-bottom: 40px;
+}
+
+.comments-right img {
+    /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.08); */
+    width: 640px;
+    margin-bottom: 40px;
 }
 
 .comments img {
@@ -408,10 +439,6 @@ button span {
 
 .message {
     width: 100%;
-}
-
-.message-center {
-    margin-left: 100px;
 }
 
 .size {
@@ -523,13 +550,15 @@ button span {
     gap: 12px;
 }
 
-@media (max-width: 786px){
-    .results{
+@media (max-width: 786px) {
+    .results {
         grid-template-columns: 1fr;
     }
 }
 
 .results img {
+    width: 500px;
+    height: 250px;
     width: 100%;
     aspect-ratio: 2/1;
     object-fit: cover;
@@ -670,7 +699,7 @@ footer p span {
     height: 50px;
 }
 
-marquee img{
+marquee img {
     width: 100px;
     aspect-ratio: 1/1;
     object-fit: contain;

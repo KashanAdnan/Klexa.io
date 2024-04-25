@@ -8,6 +8,7 @@
         padding: 9px 17px !important;
     }
 
+    /* 
     .video {
         width: 100% !important;
         height: 470px !important;
@@ -15,7 +16,7 @@
         border-right: 4px solid !important;
         background-position: center !important;
         border-radius: 12px !important;
-    }
+    } */
 
     main {
         text-align: center !important;
@@ -73,6 +74,16 @@
 
     .testimonials {
         flex-wrap: wrap !important;
+        padding: 0 20px;
+    }
+
+    .thumbnail {
+        background-size: contain !important;
+        height: 359px !important;
+    }
+
+    .comment {
+        flex-direction: column !important;
     }
 
     .testimonial {
@@ -124,7 +135,9 @@
 
     .results {
         padding: 0 10px !important;
-      
+        grid-template-rows: 1fr !important;
+        grid-template-columns: 1fr !important;
+
     }
 
     .result-container img {
@@ -154,6 +167,11 @@
 
     .proof {
         padding: 0 10px !important;
+        text-align: center !important;
+    }
+
+    .message img {
+        margin-bottom: 10px !important;
     }
 
     .message-center {
@@ -177,4 +195,11 @@
         padding: 0 20px;
     }
 
+    main h1 {
+        font-size: 2em !important;
+    }
+
+    .video {
+        top: 260px;
+    }
 }
