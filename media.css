@@ -20,7 +20,7 @@
 
     main {
         text-align: center !important;
-        /* padding: 0 20px !important; */
+        padding: 2em 20px !important;
         height: 85vh !important;
     }
 
@@ -39,7 +39,7 @@
     }
 
     .paragraph {
-        margin-top: 192px !important;
+        margin-top: 110px !important;
     }
 
     .paragraph p {
@@ -200,11 +200,14 @@
     }
 
     .video {
-        top: 290px !important;
-        height: 71.7vh !important;
+        top: 320px !important;
+        height: 51.7vh !important;
         background-position: center !important;
-        border-left: 4px solid #fff !important;
-        border-right: 4px solid #fff !important;
+        border: 4px solid #fff !important;
         border-radius: 10px;
+        width: 87% !important;
+        max-height: 71.7vh !important;
     }
+
+
 }
