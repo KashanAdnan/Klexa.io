@@ -39,7 +39,7 @@ header nav .logo {
 }
 
 header nav button {
-    font-family: "Inter" !important;
+    font-family: "Inter";
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 600;
@@ -150,7 +150,7 @@ main .video {
     justify-content: center;
     flex-direction: column;
     margin-top: 50vmin;
-    margin-top: 15rem;
+    margin-top: 19rem;
 }
 
 .paragraph p {
@@ -225,25 +225,21 @@ button span {
     margin-top: 80px;
 }
 
-.brand img {
-    width: 155px;
+.b1 img,
+.b2 img {
+    width: 120px;
 }
 
-.brand .brand-img {
-    width: 70px;
-}
-
-.brand .brand-img1 {
-    width: 100px;
+.hide-comment {
+    display: none;
 }
 
 /*  TESTIMONIAL */
 
 .testimonial {
     width: 100%;
-    height: 110vh;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    /* height: 110vh;` */
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,9 +348,8 @@ button span {
 }
 
 .testimonial-button {
-    margin-top: -40px;
+    margin-top: -10px;
     text-align: center;
-    font-size: 18px;
 }
 
 .testimonial-button span {
@@ -399,26 +394,16 @@ button span {
     font-size: 2.7em;
 }
 
-
-
 .comment {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.comments {
-    display: flex;
-    align-items: flex-start;
     width: 100%;
     justify-content: center;
     flex-direction: column;
-    margin-top: 30px;
 }
 
-.proof .comments img {
-    width: 640px;
+.proof .comment img {
+    width: 100%;
     /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.08); */
     margin-bottom: 40px;
 }
@@ -442,7 +427,7 @@ button span {
 }
 
 .size {
-    width: 700px !important;
+    width: 700px;
 }
 
 .cta-button {
@@ -460,7 +445,7 @@ button span {
     justify-content: center;
     flex-wrap: wrap;
     font-family: "Poppins";
-    z-index: -1 !important;
+    z-index: -1;
     position: relative;
 }
 
@@ -618,7 +603,7 @@ footer p span {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
     padding: 0 1rem;
 }
 
@@ -699,9 +684,273 @@ footer p span {
     height: 50px;
 }
 
-marquee img {
-    width: 100px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    margin: 0 2rem;
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.scroller {
+    max-width: 100%;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller__inner img {
+    height: 100px;
+    margin: 0 20px;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@media (max-width:930px) {
+    header {
+        padding: 0 35px;
+    }
+
+    nav button {
+        font-size: 10px;
+        padding: 9px 17px;
+    }
+
+    main {
+        text-align: center;
+        padding: 2em 20px;
+        height: 85vh;
+    }
+
+    main h1 {
+        margin-top: 0px;
+        font-size: 24px;
+    }
+
+    main h2 {
+        font-size: 19px;
+    }
+
+    .brand {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .paragraph {
+        margin-top: 110px;
+    }
+
+    .paragraph p {
+        width: 100%;
+    }
+
+    .brand img {
+        width: 100px;
+    }
+
+    .paragraph button {
+        font-size: 14px;
+    }
+
+    .paragraph button span {
+        font-size: 12px;
+    }
+
+    .video .shadow {
+        width: 100px;
+        height: 100px;
+    }
+
+    .video .shadow .play-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .border-left {
+        width: 150px;
+    }
+
+    .testimonials {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .thumbnail {
+        background-size: contain;
+        height: 359px;
+    }
+
+    .comment {
+        display: none;
+    }
+
+    .hide-comment {
+        display: block;
+    }
+
+    .hide-comment img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .testimonial {
+        height: 100%;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .testimonial-button {
+        font-size: 14px;
+    }
+
+    .testimonial-button span {
+        font-size: 12px;
+    }
+
+    .testimonial .testimonial-heading {
+        font-size: 30px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .border-right {
+        width: 50px;
+    }
+
+    .comments {
+        overflow: hidden;
+    }
+
+    .about-container {
+        padding: 20px 20px 0 20px;
+        flex-direction: column-reverse;
+        margin-bottom: -20px;
+    }
+
+    .about-container img {
+        width: 100%;
+    }
+
+    .results {
+        padding: 0 10px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+
+    }
+
+    .result-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .brand-exp .brand {
+        margin-top: -25px;
+    }
+
+    .border-center {
+        width: 300px;
+    }
+
+    .faq-heading {
+        padding: 0 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+
+
+    .proof {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .message img {
+        margin-bottom: 10px;
+    }
+
+    .message-center {
+        margin-left: 0;
+    }
+
+    .about-container .content {
+        width: 100%;
+    }
+
+    .message {
+        width: 100%;
+    }
+
+    .message img {
+        width: 100%;
+    }
+
+    .container {
+        min-width: 100%;
+        padding: 0 20px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    .video {
+        top: 320px !important;
+        height: 51.7vh !important;
+        background-position: center;
+        border: 4px solid #fff;
+        border-radius: 10px;
+        width: 87% !important;
+        max-height: 71.7vh !important;
+    }
+
+    .result-container p {
+        width: 100%;
+        text-align: center;
+    }
+
+
 }
