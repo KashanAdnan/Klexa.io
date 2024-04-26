@@ -162,6 +162,7 @@ main .video {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -169,9 +170,11 @@ main .video {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
@@ -216,7 +219,7 @@ button span {
 
 .testimonial {
   width: 100%;
-  padding: 40px 1rem 50px 1rem;
+  padding: 90px 1rem 90px 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,57 +678,51 @@ footer p span {
   white-space: nowrap;
   display: flex;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to left,
-    transparent,
-    black,
-    black,
-    black,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to left,
-    transparent,
-    black,
-    black,
-    black,
-    transparent
-  );
-  -moz-mask-image: linear-gradient(
-    to left,
-    transparent,
-    black,
-    black,
-    black,
-    transparent
-  );
-  -o-mask-image: linear-gradient(
-    to left,
-    transparent,
-    black,
-    black,
-    black,
-    transparent
-  );
-  -ms-mask-image: linear-gradient(
-    to left,
-    transparent,
-    black,
-    black,
-    black,
-    transparent
-  );
+  mask-image: linear-gradient(to left,
+      transparent,
+      black,
+      black,
+      black,
+      transparent);
+  -webkit-mask-image: linear-gradient(to left,
+      transparent,
+      black,
+      black,
+      black,
+      transparent);
+  -moz-mask-image: linear-gradient(to left,
+      transparent,
+      black,
+      black,
+      black,
+      transparent);
+  -o-mask-image: linear-gradient(to left,
+      transparent,
+      black,
+      black,
+      black,
+      transparent);
+  -ms-mask-image: linear-gradient(to left,
+      transparent,
+      black,
+      black,
+      black,
+      transparent);
 }
+
 .brand-slider:hover .slide {
   animation-play-state: paused;
 }
+
 .brand-slider .slide {
   animation: slider var(--time) linear infinite;
   display: inline-block;
 }
+
 .brand-slider.reverse:hover .slide {
   animation-play-state: paused;
 }
+
 .brand-slider.reverse .slide {
   animation: slider-reverse calc(var(--time) / 1.5) linear infinite;
   display: inline-block;
